@@ -20,3 +20,6 @@
 # Keep the installer deliverable, but not intermediate publish output.
 Distribution/*
 !Distribution/BudgetLocal-Setup.exe
+
+# Installateur compilé
+Distribution/*.exe
