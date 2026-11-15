@@ -1,0 +1,22 @@
+.dotnet-cli/
+**/bin/
+**/obj/
+.vs/
+
+# User and preview data must never be published with the source.
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/Backups/
+
+# Local review/test artifacts.
+.backup-check/
+.installer-test/
+.preview-income-data/
+.test-temp/
+.ui-review-data/
+.ui-review-empty/
+
+# Keep the installer deliverable, but not intermediate publish output.
+Distribution/*
+!Distribution/BudgetLocal-Setup.exe

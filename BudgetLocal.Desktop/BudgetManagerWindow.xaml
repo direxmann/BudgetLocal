@@ -1,0 +1,42 @@
+<Window x:Class="BudgetLocal.Desktop.BudgetManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gérer les budgets" Height="650" Width="760" MinHeight="570" MinWidth="650"
+        Background="#F4F6FA" WindowStartupLocation="CenterOwner" FontFamily="Segoe UI">
+    <Grid Margin="22">
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Mes budgets" FontSize="25" FontWeight="SemiBold" Foreground="#172B4D"/>
+            <TextBlock Text="Créez et modifiez vos budgets. Un budget contenant des transactions ne peut pas être supprimé." Foreground="#64748B" TextWrapping="Wrap" Margin="0,4,0,16"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="0.9*"/><ColumnDefinition Width="1.1*"/></Grid.ColumnDefinitions>
+            <Border Background="White" CornerRadius="12" Padding="12" Margin="0,0,10,0">
+                <DockPanel>
+                    <Button DockPanel.Dock="Bottom" Content="＋  Nouveau budget" Click="New_Click" HorizontalAlignment="Stretch"/>
+                    <ListBox x:Name="BudgetList" SelectionChanged="BudgetList_SelectionChanged" BorderThickness="0" Background="Transparent"/>
+                </DockPanel>
+            </Border>
+            <Border Grid.Column="1" Background="White" CornerRadius="12" Padding="16" Margin="10,0,0,0">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom">
+                        <TextBlock x:Name="StatusText" Foreground="#9B2C35" TextWrapping="Wrap" Margin="2,6"/>
+                        <Button Content="Enregistrer" Click="Save_Click"/>
+                        <Button Content="Supprimer ce budget" Background="#9B3A43" Click="Delete_Click"/>
+                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <TextBlock Text="Nom" Margin="2,2"/><TextBox x:Name="NameInput"/>
+                            <TextBlock Text="Description (facultative)" Margin="2,10,2,2"/><TextBox x:Name="DescriptionInput" Height="72" AcceptsReturn="True" TextWrapping="Wrap" VerticalContentAlignment="Top"/>
+                            <TextBlock Text="Plafond mensuel (€), facultatif" Margin="2,10,2,2"/><TextBox x:Name="LimitInput" ToolTip="Ex. : 1 200,00"/>
+                            <TextBlock Text="La suppression d’un budget contenant des transactions est bloquée pour préserver vos données." Foreground="#64748B" TextWrapping="Wrap" Margin="3,8"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,14,0,0">
+            <Button Content="Fermer" IsCancel="True" Click="Close_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

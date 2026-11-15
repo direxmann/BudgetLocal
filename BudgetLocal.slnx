@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BudgetLocal.Core/BudgetLocal.Core.csproj" />
+  <Project Path="BudgetLocal.Desktop/BudgetLocal.Desktop.csproj" />
+  <Project Path="BudgetLocal.Tests/BudgetLocal.Tests.csproj" />
+</Solution>

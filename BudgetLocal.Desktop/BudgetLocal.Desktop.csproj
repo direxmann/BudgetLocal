@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BudgetLocal.Core\BudgetLocal.Core.csproj" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.5" />
+    <Resource Include="Assets\BudgetLocal.ico" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041</TargetFramework>
+    <Company>Delguste François</Company>
+    <Product>BudgetLocal</Product>
+    <Copyright>Propriété de Delguste François</Copyright>
+    <ApplicationIcon>Assets\BudgetLocal.ico</ApplicationIcon>
+    <SatelliteResourceLanguages>fr</SatelliteResourceLanguages>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>
